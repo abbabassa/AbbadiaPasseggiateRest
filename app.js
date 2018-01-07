@@ -25,6 +25,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/tiles/trasCTR',express.static(path.join(__dirname, 'Tiles/GeoBaseTras')));
 app.use('/tiles/trasAP',express.static(path.join(__dirname, 'Tiles/GeoMeshTras')));
+app.use('/vector',express.static(path.join(__dirname, 'Vectors')));
+
 
 
 app.use('/', index);
