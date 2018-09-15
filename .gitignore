@@ -31,3 +31,5 @@ Thumbs.db
 
 #tiles
 /Tiles
+/obj/*
+/bin/Microsoft.NodejsTools.WebRole.dll
