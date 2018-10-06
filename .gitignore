@@ -36,4 +36,4 @@ Thumbs.db
 /.vs/AbbadiaPasseggiateRest/v15/.suo
 
 #dist
-/public/dist
+#/public/dist
