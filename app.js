@@ -6,8 +6,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var cors=require('cors');
 
-var index = require('./routes/index');
-var users = require('./routes/users');
+var locations = require('./routes/locations');
+
 
 var app = express();
 
@@ -24,16 +24,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/webapp/map', express.static(path.join(__dirname, 'public/dist')));
-app.use('/webapp', express.static(path.join(__dirname, 'public/dist')));
+app.use('/map', express.static(path.join(__dirname, 'public/dist')));
+app.use('/', express.static(path.join(__dirname, 'public/dist')));
 app.use('/tiles/trasCTR',express.static(path.join(__dirname, 'Tiles/GeoBaseTras')));
 app.use('/tiles/trasAP',express.static(path.join(__dirname, 'Tiles/GeoMeshTras')));
 app.use('/vector',express.static(path.join(__dirname, 'Vectors')));
 
-
-
-app.use('/', index);
-app.use('/users', users);
+app.use('/services/locations', locations);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -1,8 +1,17 @@
 {
-    "description": [
-        "La località di Campelli si trova ad una quota compresa tra i 900 e i 1000 metri s.l.m., raggiungibile anche in automobile scendendo dai Piani dei Resinelli.",
-        "Salendo da Abbadia la chiesetta di Santa Maria dei Campelli ci segnala l'arrivo nella località, dove la vista si apre sulla Grignetta in alto, con il rifugio Rosalba immerso nelle guglie, e sul lago in basso, con la cittadina di Mandello ben in vista.",
-        "A Campelli troviamo, oltre numerose baite costruite in questo splendido alpeggio, anche il bacino di alimentazione della centrale elettrica posta a lago, costuita negli anni '60 dalla Moto Guzzi."
-        ],
-    "inlineLinks": []
+    "description":
+        { 
+            "it" :
+            [
+                "La località di Campelli si trova ad una quota compresa tra i 900 e i 1000 metri s.l.m., raggiungibile anche in automobile scendendo dai Piani dei Resinelli.",
+                "Salendo da Abbadia la chiesetta di Santa Maria dei Campelli ci segnala l'arrivo nella località, dove la vista si apre sulla Grignetta in alto, con il rifugio Rosalba immerso nelle guglie, e sul lago in basso, con la cittadina di Mandello ben in vista.",
+                "A Campelli troviamo, oltre numerose baite costruite in questo splendido alpeggio, anche il bacino di alimentazione della centrale elettrica posta a lago, costuita negli anni '60 dalla Moto Guzzi."
+            ],
+            "en" :
+            [
+                "Campelli is situated at about 950 m. above sea level and you can reach it also by car coming from Piani dei Resinelli.",
+                "Going up from Abbadia, the little church of Santa Maria dei Campelli welcomes visitors to the place, where you can get an amazing view of the Grignetta above, with the refuge Rosalba hidden in its peaks, and of the lake below, with the small town of Mandello prominently.",
+                "At Campelli you can find plenty of chalets built in this beautiful mountain pasture as well as the water supply of the power station placed at the lake, built in the 60s by Moto Guzzi."
+            ]
+        }
 }
