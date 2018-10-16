@@ -1,0 +1,25 @@
+{
+    "description" : {
+       "it":
+           [
+               "Il Forcellino è uno sperone roccioso che si erge a strapiombo sul Lago, a 1260 m sul livello del mare. Lo sperone del Forcellino delimita il lato destro della Val Verde, che scende ripida verso la località Pradello (zona Orsa Maggiore).",
+               "La conformazione della punta, con una parete verticale di circa 400m che cade verticale verso il Lago di Como, ripaga chi si è avventurato fino a questo luogo di uno splendido panorama. La natura del luogo lo rende inoltre appetibile agli appassionati di arrampicata sportiva: lungo la parete sono presenti diverse vie.",
+               "Si può raggiungere il Forcellino direttamente da Abbadia (o Crebbio), seguendo l'@{AltaVia}, oppure molto più comodamente dai Piani Resinelli, percorrendo a ritroso l'ultimo facile tratto della stessa Alta Via (20 min di cammino circa su pista carrareccia)."
+           ],
+       "en":
+           [
+               "Forcellino is a rocky spur which overlooks the lake at 1260 m above sea level and forms the boundary of Val Verde, which descends steeply towards Pradello (Orsa Maggiore area).",
+               "The shape of the peak, with a vertical face of about 400m going down to Lake Como, repays those who venture to this place with a wonderful view. It is ideal for sport climbing lovers who can find several trails along the rock face.",
+               "You can get to Forcellino directly from Abbadia (or Crebbio), following  the @{AltaVia}, or more conveniently from Pian Resinelli, going back along the final part of Alta via (20 minutes’ walk on a cart road)."
+           ]
+   },
+   "inlineLinks" : [
+       {
+           "tag": "AltaVia",
+           "type" : 2,
+           "toId" : 5,
+           "itDesc": "Alta Via delle Grigne (Sentiero 5A)",
+           "enDesc" : "Alta Via of Grigne (Path 5A)"
+       }
+   ]
+}
