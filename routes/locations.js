@@ -8,12 +8,21 @@ router.get('/map/:locale/:id', function(req, res, next) {
   pool.query(locationsQueries.getDescriptionById(req.params.locale),
    [req.params.id])
   .then(qResult=>{
-    res.locals.qResult=qResult;
+    res.locals.locRes={};
+    res.locals.locRes.locData=qResult.rows.length>0? qResult.rows[0] : null;
     next();
   })
   .catch(err=> next(err));
+}, function(req,res, next){
+  pool.query(locationsQueries.getTrailsByLocationId(req.params.locale),
+    [req.params.id])
+  .then(qResult=>{
+    res.locals.locRes.trailData= qResult.rows ;
+    next()
+  })
+  .catch(err=>{ console.log(err); next(err)});
 }, function(req,res,next){
-  res.json(res.locals.qResult && res.locals.qResult.rows.length >0 ? res.locals.qResult.rows[0] : "Nessun risultato")
+  res.json(res.locals.locRes);
 });
 
 module.exports = router;
