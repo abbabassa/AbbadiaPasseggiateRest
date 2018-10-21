@@ -1,7 +1,10 @@
 
 module.exports.getDescriptionById=  function(locale)
 {
-    return `SELECT desc_data -> 'description'-> '${locale}' AS description
+    return `SELECT 
+              id as id,
+              desc_data -> 'description'-> '${locale}' AS description,
+              "name" as "name"
       FROM abbadiapasseggiate.locations WHERE id = $1 and desc_data -> 'description' ? '${locale}';`
 }
 
