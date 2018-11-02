@@ -5,7 +5,8 @@ module.exports.getDescriptionById=  function(locale)
               id as id,
               desc_data -> 'description'-> '${locale}' AS description,
               "name" as "name"
-      FROM abbadiapasseggiate.locations WHERE id = $1 and desc_data -> 'description' ? '${locale}';`
+            FROM abbadiapasseggiate.locations WHERE id = $1;`
+      //FROM abbadiapasseggiate.locations WHERE id = $1 and desc_data -> 'description' ? '${locale}';`
 }
 
 module.exports.getTrailsByLocationId = function(locale)

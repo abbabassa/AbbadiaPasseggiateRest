@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var pool= require('../pg/postgresPool')
+var pool= require('../pg/PostgresPool')
 var locationsQueries = require('../pg/queries/locations')
 
 
