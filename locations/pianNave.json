@@ -1,0 +1,34 @@
+{
+    "description" : {
+       "it":
+           [
+               "Con Prato della Nave (o anche Prato alla Nave) si intende una località posta a circa 1100 m sul livello del mare, a poca distanza dai Piani Resinelli. Il nome Prato della Nave deriva, molto probabilmente, dallo stesso prefisso in lingua ligure antica (da influssi pre-romani) che è presente anche nel nome della località @{navegno}. Tale prefisso \"nav\" indica una zona di terreno pianeggiante, un pianoro. Il nome della località descrive quindi perfettamente Pian della Nave: un vasto prato che si apre tra i boschi in corrispondenza di un pianoro.",
+               "Il prato è delimitato, nella sua estremità settentrionale, dal torrente della Valle Fontanone, comoda fonte di acqua per i caratteristici caselli che sorgono proprio in questa estremità del prato.",
+               "E' possibile raggiungere il Prato della Nave attraverso brevi deviazioni rispetto al sentiero dell' @{AltaVia} (sentiero 5A - sia da Abbadia che dal Forcellino/Resinelli), oppure direttamente dall'abitato di Pian dei Resinelli, scendendo, a piedi o in macchina, per via ai Campelli, e deviando in località il Giuf su un sentiero laterale (vedi mappa)."
+            
+           ],
+       "en":
+           [
+               "Prato della Nave (or Prato alla Nave) is situated at about 1100 m above sea level, not far from Piani Resinelli. The name Prato della Nave most likely comes from the same root in ancient ligurian language (from pre-Roman influences) as the name of the place @{navegno}. This root \"nav\" indicates an area of flat land, a plateau and perfectly describes Pian della Nave: a vast meadow that opens among the woods.",
+               "In its northern edge, the meadow is bordered by the stream of Valle Fontanone, convenient source of water for the caselli (typical little houses) rising at the end of the meadow.",
+               "You can reach Prato della Nave through short deviations from the trail of the @{AltaVia} (path 5A - both from Abbadia and Pian dei Resinelli) or directly from Pian dei Resinelli, either on foot or by car, going down to Campelli and taking a side trail at Giuf (see map)."
+           ]
+   },
+   "inlineLinks" : [
+       {
+           "tag": "AltaVia",
+           "type" : 2,
+           "toId" : 5,
+           "itDesc": "Alta Via delle Grigne",
+           "enDesc" : "Alta Via of Grigne"
+       },
+       {
+        "tag": "navegno",
+        "type" : 1,
+        "toId" : 27,
+        "itDesc": "Navegno",
+        "enDesc" : "Navegno"
+    }
+
+   ]
+}
