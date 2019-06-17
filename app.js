@@ -29,8 +29,6 @@ app.use('/', express.static(path.join(__dirname, 'public/dist')));
 app.use('/en/map', express.static(path.join(__dirname, 'public/dist/en')));
 app.use('/en', express.static(path.join(__dirname, 'public/dist/en')));
 
-app.use('/tiles/trasCTR',express.static(path.join(__dirname, 'Tiles/GeoBaseTras')));
-app.use('/tiles/trasAP',express.static(path.join(__dirname, 'Tiles/GeoMeshTras')));
 app.use('/vector',express.static(path.join(__dirname, 'Vectors')));
 
 app.use('/services/locations', locations);
