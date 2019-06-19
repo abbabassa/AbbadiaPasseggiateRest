@@ -40,6 +40,9 @@ module.exports.getPhotosByLocationId = function(locale)
           FROM
             abbadiapasseggiate.photos
           where 
-            photos.location_id = $1;`
+            photos.location_id = $1
+          ORDER BY
+            photos.rating DESC
+          LIMIT 5;`
 }
 
