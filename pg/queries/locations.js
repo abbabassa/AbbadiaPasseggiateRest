@@ -27,3 +27,19 @@ module.exports.getTrailsByLocationId = function(locale)
 }
 
 
+module.exports.getPhotosByLocationId = function(locale)
+{
+  return `SELECT 
+            photos.id as id,
+            photos.file_path as photoName,
+            photos.location_id as locId,
+            photos.title as title,
+            photos.description-> 'desc'-> '${locale}' as description,
+            photos.type as type,
+            photos.ext as ext
+          FROM
+            abbadiapasseggiate.photos
+          where 
+            photos.location_id = $1;`
+}
+

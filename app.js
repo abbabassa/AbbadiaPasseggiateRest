@@ -31,6 +31,9 @@ app.use('/en', express.static(path.join(__dirname, 'public/dist/en')));
 
 app.use('/vector',express.static(path.join(__dirname, 'Vectors')));
 
+
+
+app.use('/img', express.static(path.join(__dirname, 'public/img')));
 app.use('/services/locations', locations);
 
 // catch 404 and forward to error handler
