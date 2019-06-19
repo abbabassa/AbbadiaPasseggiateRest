@@ -30,7 +30,6 @@ npm-debug.log
 Thumbs.db
 
 #tiles
-/Tiles
 /obj/*
 /bin/Microsoft.NodejsTools.WebRole.dll
 /.vs/AbbadiaPasseggiateRest/v15/.suo
