@@ -9,10 +9,39 @@ router.get('/map/:locale/:id', function(req, res, next) {
    [req.params.id])
   .then(qResult=>{
     res.locals.locRes={};
-    res.locals.locRes.locData=qResult.rows.length>0? qResult.rows[0] : null;
+    if (qResult.rows.length == 0)
+    {
+      res.locals.locRes.locData = null;
+      next();
+      return;
+    }
+    let refs;
+    if (qResult.rows[0].ref_index == null || qResult.rows[0].ref_index == undefined)
+    {
+      refs = [];
+    }
+    else
+    {
+      refs =   qResult.rows.map (row => 
+        {
+          return { "index": row.ref_index, "id": row.ref_id, "name": row.ref_name, "type":0}
+        });
+    }
+  
+    
+    var desc = qResult.rows.map (row => 
+      {
+        return { "id": row.ref_index, "description": row.description, "name": row.name}
+      })
+    res.locals.locRes.locData = desc[0];
+    res.locals.locRes.locData["refs"] = refs
+
     next();
   })
-  .catch(err=> next(err));
+  .catch(err=> {
+    console.log(err);
+    next(err)
+  });
 }, function(req,res, next){
   pool.query(locationsQueries.getTrailsByLocationId(req.params.locale),
     [req.params.id])
