@@ -1,12 +1,28 @@
 
+// NOTE: schema name is mandatory with pg library. More information about that in PostgresPool.js
 module.exports.getDescriptionById=  function(locale)
 {
-    return `SELECT 
-              id as id,
-              desc_data -> 'description'-> '${locale}' AS description,
-              "name" as "name"
-            FROM abbadiapasseggiate.locations WHERE id = $1;`
-      //FROM abbadiapasseggiate.locations WHERE id = $1 and desc_data -> 'description' ? '${locale}';`
+
+    query= `SELECT 
+              loc.id as id,
+              loc.desc_data -> 'description'-> '${locale}' AS description,
+              loc."name" as "name",
+              loc_ref.main_loc_index as ref_index,
+              loc_ref.link_loc_id as ref_id,
+              loc2."name" as ref_name
+                      FROM 
+                abbadiapasseggiate.locations as loc
+              LEFT OUTER JOIN 
+                (abbadiapasseggiate.locations_desc_loc_ref as loc_ref
+                  inner join 
+                abbadiapasseggiate.locations as loc2 
+                  on
+                loc_ref.link_loc_id = loc2.id)  
+              ON 
+                loc.id = loc_ref.main_loc_id
+            WHERE 
+              loc.id = $1;`;
+      return query;
 }
 
 module.exports.getTrailsByLocationId = function(locale)
