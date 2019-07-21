@@ -15,26 +15,14 @@ router.get('/map/:locale/:id', function(req, res, next) {
       next();
       return;
     }
-    let refs;
-    if (qResult.rows[0].ref_index == null || qResult.rows[0].ref_index == undefined)
+    if (qResult.rows[0].refs[0].index == null || qResult.rows[0].refs[0].index == undefined)
     {
       refs = [];
     }
-    else
-    {
-      refs =   qResult.rows.map (row => 
-        {
-          return { "index": row.ref_index, "id": row.ref_id, "name": row.ref_name, "type":0}
-        });
-    }
+    
   
     
-    var desc = qResult.rows.map (row => 
-      {
-        return { "id": row.ref_index, "description": row.description, "name": row.name}
-      })
-    res.locals.locRes.locData = desc[0];
-    res.locals.locRes.locData["refs"] = refs
+    res.locals.locRes.locData = qResult.rows[0];
 
     next();
   })
