@@ -6,24 +6,29 @@ module.exports.getDescriptionById=  function(locale)
   
 
   var query = 
-  `SELECT 
-    loc.id as id,
-    loc.desc_data -> 'description'-> '${locale}' AS description,
-    loc."name" as "name",
-    array_agg(json_build_object('index',loc_ref.main_loc_index, 'id',loc_ref.link_loc_id, 'name',loc2."name")) as "refs"
-            FROM 
-      abbadiapasseggiate.locations as loc
-    LEFT OUTER JOIN 
-      (abbadiapasseggiate.locations_desc_loc_ref as loc_ref
-        inner join 
-      abbadiapasseggiate.locations as loc2 
-        on
-      loc_ref.link_loc_id = loc2.id)  
-    ON 
-      loc.id = loc_ref.main_loc_id
-  WHERE 
-    loc.id = $1
-  GROUP BY loc.id;`;
+    `SELECT 
+      loc.id as id,
+      loc.desc_data -> 'description'-> '${locale}' AS description,
+      loc."name" as "name",
+      array_agg(json_build_object('index',desc_ref.desc_index, 'id',loc_ref.ref_loc_id, 'name',loc2."name", 'type', 1)) as "refs"
+              FROM 
+        abbadiapasseggiate.locations as loc
+      LEFT OUTER JOIN 
+        (
+        abbadiapasseggiate.desc_references as desc_ref
+          inner join
+        abbadiapasseggiate.locations_desc_referecens as loc_ref
+          on
+        desc_ref.id = loc_ref.desc_ref_id
+          inner join 
+        abbadiapasseggiate.locations as loc2 
+          on
+        loc_ref.ref_loc_id = loc2.id)  
+      ON 
+        desc_ref.main_loc_desc_ref = loc.id
+    WHERE 
+      loc.id = $1
+    GROUP BY loc.id;`;
     
 
   return query;
