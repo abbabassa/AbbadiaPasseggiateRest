@@ -3,26 +3,53 @@
 module.exports.getDescriptionById=  function(locale)
 {
 
-    query= `SELECT 
-              loc.id as id,
-              loc.desc_data -> 'description'-> '${locale}' AS description,
-              loc."name" as "name",
-              loc_ref.main_loc_index as ref_index,
-              loc_ref.link_loc_id as ref_id,
-              loc2."name" as ref_name
-                      FROM 
-                abbadiapasseggiate.locations as loc
-              LEFT OUTER JOIN 
-                (abbadiapasseggiate.locations_desc_loc_ref as loc_ref
-                  inner join 
-                abbadiapasseggiate.locations as loc2 
-                  on
-                loc_ref.link_loc_id = loc2.id)  
-              ON 
-                loc.id = loc_ref.main_loc_id
-            WHERE 
-              loc.id = $1;`;
-      return query;
+  
+  var query =
+  `WITH loc_view
+  AS (
+    SELECT loc.id AS id
+      ,array_agg(json_build_object('index', desc_ref.desc_index, 'id', loc_ref.ref_loc_id, 'name', loc2."name", 'type', 1)) AS "refs"
+    FROM abbadiapasseggiate.locations AS loc
+    LEFT OUTER JOIN (
+      abbadiapasseggiate.desc_references AS desc_ref INNER JOIN abbadiapasseggiate.locations_desc_referecens AS loc_ref
+        ON desc_ref.id = loc_ref.desc_ref_id
+      INNER JOIN abbadiapasseggiate.locations AS loc2
+        ON loc_ref.ref_loc_id = loc2.id
+      )
+      ON desc_ref.main_loc_desc_ref = loc.id
+    WHERE loc.id = $1
+      AND desc_ref.desc_index IS NOT NULL
+    GROUP BY loc.id
+    )
+    ,loc_view2
+  AS (
+    SELECT loc3.id AS id
+      ,array_agg(json_build_object('index', desc_ref2.desc_index, 'id', trail_ref.ref_trail_id, 'name', trails."name", 'type', 2, 'oldLink', trails.old_link)) AS "refs"
+    FROM abbadiapasseggiate.locations AS loc3
+    LEFT OUTER JOIN (
+      abbadiapasseggiate.desc_references AS desc_ref2 INNER JOIN abbadiapasseggiate.trails_desc_references AS trail_ref
+        ON desc_ref2.id = trail_ref.desc_ref_id
+      INNER JOIN abbadiapasseggiate.trails AS trails
+        ON trail_ref.ref_trail_id = trails.trail_id
+      )
+      ON desc_ref2.main_loc_desc_ref = loc3.id
+    WHERE loc3.id = $1
+      AND desc_ref2.desc_index IS NOT NULL
+    GROUP BY loc3.id
+    )
+  SELECT loc0.id AS id
+    ,loc0.desc_data -> 'description' -> '${locale}' AS description
+    ,loc0."name" AS "name"
+    ,loc_view.refs || loc_view2.refs || '{}' AS refs
+  FROM abbadiapasseggiate.locations AS loc0
+  LEFT OUTER JOIN loc_view
+    ON loc0.id = loc_view.id
+  LEFT OUTER JOIN loc_view2
+    ON loc0.id = loc_view2.id
+  WHERE loc0.id = $1;`;
+    
+
+  return query;
 }
 
 module.exports.getTrailsByLocationId = function(locale)
