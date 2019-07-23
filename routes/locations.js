@@ -15,10 +15,7 @@ router.get('/map/:locale/:id', function(req, res, next) {
       next();
       return;
     }
-    if (qResult.rows[0].refs[0].index == null || qResult.rows[0].refs[0].index == undefined)
-    {
-      refs = [];
-    }
+
     
   
     
