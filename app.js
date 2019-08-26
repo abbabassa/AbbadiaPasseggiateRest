@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 var cors=require('cors');
 
 var locations = require('./routes/locations');
+var trails =  require('./routes/trails');
 
 
 var app = express();
@@ -35,6 +36,7 @@ app.use('/vector',express.static(path.join(__dirname, 'Vectors')));
 
 app.use('/img', express.static(path.join(__dirname, 'public/img')));
 app.use('/services/locations', locations);
+app.use('/services/trails', trails);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

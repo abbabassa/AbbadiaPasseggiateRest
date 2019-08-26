@@ -57,10 +57,8 @@ module.exports.getTrailsByLocationId = function(locale)
   return `SELECT   
             tr.trail_id as id,
             tr."name" as "name",
-            tr.gpx_name as gpx,
-            tr.rating as rating,
-            tr."level" as "level",
-            tr.${locale}_descr as descr
+            2 as type,
+            0 as index
           FROM  
             abbadiapasseggiate.trails tr, 
             abbadiapasseggiate.trails_locations tr_lc

@@ -1,0 +1,28 @@
+{
+"type": "FeatureCollection",
+"name": "AltaViaIncroci",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 0 , "style": "intersection", "icon":"info"}, "geometry": { "type": "Point", "coordinates": [ 9.335524852589774, 45.912958957554153 ] } },
+{ "type": "Feature", "properties": { "id": 1 , "style": "intersection", "icon":"info"}, "geometry": { "type": "Point", "coordinates": [ 9.339745583961614, 45.911215475650188 ] } },
+{ "type": "Feature", "properties": { "id": 2 , "style": "intersection", "icon":"info"}, "geometry": { "type": "Point", "coordinates": [ 9.339174875856358, 45.910462893533364 ] } },
+{ "type": "Feature", "properties": { "id": 3 , "style": "intersection", "icon":"info"}, "geometry": { "type": "Point", "coordinates": [ 9.343800612116748, 45.904279033363089 ] } },
+{ "type": "Feature", "properties": { "id": 4 , "style": "intersection", "icon":"info"}, "geometry": { "type": "Point", "coordinates": [ 9.34468959408535, 45.903390051394489 ] } },
+{ "type": "Feature", "properties": { "id": 5 , "style": "intersection", "icon":"info"}, "geometry": { "type": "Point", "coordinates": [ 9.35034538519302, 45.903324570903685 ] } },
+{ "type": "Feature", "properties": { "id": 6 , "style": "intersection", "icon":"info"}, "geometry": { "type": "Point", "coordinates": [ 9.350947450886478, 45.903625603750413 ] } },
+{ "type": "Feature", "properties": { "id": 7 , "style": "intersection", "icon":"info"}, "geometry": { "type": "Point", "coordinates": [ 9.352139039238111, 45.903738491067934 ] } },
+{ "type": "Feature", "properties": { "id": 8 , "style": "intersection", "icon":"info"}, "geometry": { "type": "Point", "coordinates": [ 9.356065009280863, 45.904102239091067 ] } },
+{ "type": "Feature", "properties": { "id": 9 , "style": "intersection", "icon":"info"}, "geometry": { "type": "Point", "coordinates": [ 9.356278240880629, 45.90173160542308 ] } },
+{ "type": "Feature", "properties": { "id": 10, "style": "intersection", "icon":"info" }, "geometry": { "type": "Point", "coordinates": [ 9.357758319043711, 45.901204797941304 ] } },
+{ "type": "Feature", "properties": { "id": 11, "style": "intersection", "icon":"info" }, "geometry": { "type": "Point", "coordinates": [ 9.358189485881471, 45.900714051685952 ] } },
+{ "type": "Feature", "properties": { "id": 12, "style": "intersection", "icon":"info" }, "geometry": { "type": "Point", "coordinates": [ 9.358183214363832, 45.900679558338936 ] } },
+{ "type": "Feature", "properties": { "id": 13, "style": "intersection", "icon":"info" }, "geometry": { "type": "Point", "coordinates": [ 9.362352205715144, 45.895514963562249 ] } },
+{ "type": "Feature", "properties": { "id": 14, "style": "intersection", "icon":"info" }, "geometry": { "type": "Point", "coordinates": [ 9.366017907775827, 45.89354413914382 ] } },
+{ "type": "Feature", "properties": { "id": 15, "style": "intersection", "icon":"info" }, "geometry": { "type": "Point", "coordinates": [ 9.369429613372084, 45.892383908380388 ] } },
+{ "type": "Feature", "properties": { "id": 16, "style": "intersection", "icon":"info" }, "geometry": { "type": "Point", "coordinates": [ 9.369486057030846, 45.892289835615784 ] } },
+{ "type": "Feature", "properties": { "id": 17, "style": "intersection", "icon":"info" }, "geometry": { "type": "Point", "coordinates": [ 9.371761050054818, 45.8913710582815 ] } },
+{ "type": "Feature", "properties": { "id": 18, "style": "intersection", "icon":"info" }, "geometry": { "type": "Point", "coordinates": [ 9.374370001393132, 45.890424059117834 ] } },
+{ "type": "Feature", "properties": { "id": 19, "style": "intersection", "icon":"info" }, "geometry": { "type": "Point", "coordinates": [ 9.378385340562255, 45.88746703855049 ] } },
+{ "type": "Feature", "properties": { "id": 20, "style": "intersection", "icon":"info" }, "geometry": { "type": "Point", "coordinates": [ 9.379645915607931, 45.888106733349787 ] } }
+]
+}

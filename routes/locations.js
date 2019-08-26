@@ -11,7 +11,7 @@ router.get('/map/:locale/:id', function(req, res, next) {
     res.locals.locRes={};
     if (qResult.rows.length == 0)
     {
-      res.locals.locRes.locData = null;
+      res.locals.locRes.mainData = null;
       next();
       return;
     }
@@ -19,7 +19,7 @@ router.get('/map/:locale/:id', function(req, res, next) {
     
   
     
-    res.locals.locRes.locData = qResult.rows[0];
+    res.locals.locRes.mainData = qResult.rows[0];
 
     next();
   })
@@ -31,7 +31,7 @@ router.get('/map/:locale/:id', function(req, res, next) {
   pool.query(locationsQueries.getTrailsByLocationId(req.params.locale),
     [req.params.id])
   .then(qResult=>{
-    res.locals.locRes.trailData= qResult.rows ;
+    res.locals.locRes.trailRefs= qResult.rows ;
     next()
   })
   .catch(err=> next(err));
