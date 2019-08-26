@@ -71,7 +71,8 @@ module.exports.getTrailData= function(locale)
                       'ref', desc_view.refs || desc_view2.refs || '{}', 
                       'mainTrailsId', trail0.trail_id, 
                       'parIndex', descriptions0."index",
-                      'featureId', descriptions0.feature_id)
+                      'featureId', descriptions0.feature_id,
+                      'intersectionFeatureIds', descriptions0.intersection_features_id)
           end) AS "pars"
         FROM abbadiapasseggiate.trails AS trail0
         INNER JOIN abbadiapasseggiate.trails_descriptions as descriptions0
