@@ -13,7 +13,7 @@ module.exports.getTrailHeaderData = function(locale)
             tr.trail_id = $1;`
 }
 
-
+/** Seriously? */
 module.exports.getTrailData= function(locale)
 {
   locale = `'${locale}'`;
@@ -53,6 +53,8 @@ module.exports.getTrailData= function(locale)
                   'name', trail0."name",
                   'level', trail0."level",
                   'rating', trail0.rating,
+                  'stepsLayerName', trail0.steps_layer_name,
+                  'intersectionsLayerName', trail0.intersections_layer_name,
                   'pars', array_agg(
                       case when descriptions0.main_descr then 
                         json_build_object(
