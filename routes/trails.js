@@ -4,6 +4,15 @@ var pool= require('../pg/PostgresPool')
 var trailsQueries = require('../pg/queries/trails')
 
 
+router.get(('/map/:locale/intersection/:trail_id/:feature_id'), function(req, res, next)
+{
+  pool.query(trailsQueries.getPhotosByTrailAndFeatureIds(req.params.locale), 
+    [req.params.trail_id, req.params.feature_id])
+  .then(qResult => {
+    res.json(qResult.rows);
+  });
+});
+
 router.get('/map/:locale/:id', function(req, res, next) {
   pool.query(trailsQueries.getTrailData(req.params.locale),
    [req.params.id])

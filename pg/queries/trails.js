@@ -86,3 +86,20 @@ module.exports.getTrailData= function(locale)
         group by trail0.trail_id;`
 }
 
+module.exports.getPhotosByTrailAndFeatureIds = function(locale)
+{
+  return `SELECT 
+            photos.id as id,
+            photos.file_path as photoName,
+            photos.intersection_trail_id as "trailId",
+            photos.intersection_feature_id as "featureId",
+            photos.title as title,
+            photos.description-> 'desc'-> '${locale}' as description,
+            photos.type as type,
+            photos.ext as ext
+          FROM
+            abbadiapasseggiate.photos
+          where 
+            photos.intersection_trail_id = $1 and
+            photos.intersection_feature_id = $2;`
+}

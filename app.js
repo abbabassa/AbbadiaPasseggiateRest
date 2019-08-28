@@ -8,6 +8,7 @@ var cors=require('cors');
 
 var locations = require('./routes/locations');
 var trails =  require('./routes/trails');
+var serveApp = require('./routes/serve-application');
 
 
 var app = express();
@@ -24,11 +25,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use('/map', express.static(path.join(__dirname, 'public/dist')));
-app.use('/', express.static(path.join(__dirname, 'public/dist')));
 
-app.use('/en/map', express.static(path.join(__dirname, 'public/dist/en')));
-app.use('/en', express.static(path.join(__dirname, 'public/dist/en')));
 
 app.use('/vector',express.static(path.join(__dirname, 'Vectors')));
 
@@ -37,6 +34,10 @@ app.use('/vector',express.static(path.join(__dirname, 'Vectors')));
 app.use('/img', express.static(path.join(__dirname, 'public/img')));
 app.use('/services/locations', locations);
 app.use('/services/trails', trails);
+
+// to serveApplication without interfering with Angular router behavior
+app.use(serveApp);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
