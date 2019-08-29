@@ -3,8 +3,14 @@ var router = express.Router();
 var path = require('path');
 
 // basepath to public/dist to download js and css files (according to application basepath)
-router.use('/en', express.static(path.join(__dirname, '../public/dist/en')));
-router.use('/', express.static(path.join(__dirname, '../public/dist')));
+
+// first of all /en is checked, if there is a static file with the same path is returned. If not / is checked (for italian)
+// Note. When these are called with \map;loc=1; trails=0.... or \en\map;loc=1... a static file with that name is searched but not found, so the control
+// can pass to the next middleware
+
+// that's for not interfering with angular static files request => best option è to search first for static files, only in case appy logics
+router.use('/en',express.static(path.join(__dirname, '../public/dist/en')));
+router.use('/',express.static(path.join(__dirname, '../public/dist')));
 
 
 // express seems to have some problem with Angular notation for optional parameters and secondary outlet.
@@ -15,17 +21,15 @@ router.use(function(req,res,next) {
   var appCompatiblePath =   req.originalUrl.match(regex);
   if(appCompatiblePath && appCompatiblePath.length > 0)
   {
-    next()
+    console.log("english version found")
+    console.log("orignalPathWas" , req.originalUrl )
+    res.sendFile(path.join(__dirname, '../public/dist/en/index.html'));
   }
   else
   {
-    next('route');
+    next();
   }
   
-}, 
-function(req,res,next)
-{
-  res.sendFile(path.join(__dirname, '../public/dist/en/index.html'))
 });
 
 router.use(function(req,res,next) {
@@ -33,17 +37,15 @@ router.use(function(req,res,next) {
   var appCompatiblePath =   req.originalUrl.match(regex);
   if(appCompatiblePath && appCompatiblePath.length > 0)
   {
-    next()
+    console.log("italian version found")
+    console.log("orignalPathWas" , req.originalUrl )
+    res.sendFile(path.join(__dirname, '../public/dist/index.html'))
   }
   else
   {
-    next('route');
+    next();
   }
   
-}, 
-function(req,res,next)
-{
-  res.sendFile(path.join(__dirname, '../public/dist/index.html'))
 });
 
 
