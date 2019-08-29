@@ -21,8 +21,6 @@ router.use(function(req,res,next) {
   var appCompatiblePath =   req.originalUrl.match(regex);
   if(appCompatiblePath && appCompatiblePath.length > 0)
   {
-    console.log("english version found")
-    console.log("orignalPathWas" , req.originalUrl )
     res.sendFile(path.join(__dirname, '../public/dist/en/index.html'));
   }
   else
@@ -37,8 +35,6 @@ router.use(function(req,res,next) {
   var appCompatiblePath =   req.originalUrl.match(regex);
   if(appCompatiblePath && appCompatiblePath.length > 0)
   {
-    console.log("italian version found")
-    console.log("orignalPathWas" , req.originalUrl )
     res.sendFile(path.join(__dirname, '../public/dist/index.html'))
   }
   else
