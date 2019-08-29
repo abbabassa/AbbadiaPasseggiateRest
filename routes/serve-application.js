@@ -8,6 +8,7 @@ var path = require('path');
 // Note. When these are called with \map;loc=1; trails=0.... or \en\map;loc=1... a static file with that name is searched but not found, so the control
 // can pass to the next middleware
 
+// that's for not interfering with angular static files request => best option è to search first for static files, only in case appy logics
 router.use('/en',express.static(path.join(__dirname, '../public/dist/en')));
 router.use('/',express.static(path.join(__dirname, '../public/dist')));
 
