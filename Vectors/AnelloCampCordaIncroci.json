@@ -1,0 +1,14 @@
+{
+"type": "FeatureCollection",
+"name": "AnelloCampCordaIncroci",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 0, "style": "intersection", "icon": "info", "interactId": 3 }, "geometry": { "type": "Point", "coordinates": [ 9.348912038876703, 45.900327054544334 ] } },
+{ "type": "Feature", "properties": { "id": 1, "style": "intersection", "icon": "info", "interactId": 3 }, "geometry": { "type": "Point", "coordinates": [ 9.353875376380755, 45.898975594957058 ] } },
+{ "type": "Feature", "properties": { "id": 2, "style": "intersection", "icon": "info", "interactId": 3 }, "geometry": { "type": "Point", "coordinates": [ 9.357749372632496, 45.90118528070559 ] } },
+{ "type": "Feature", "properties": { "id": 3, "style": "intersection", "icon": "info", "interactId": 3 }, "geometry": { "type": "Point", "coordinates": [ 9.360529799916847, 45.90178138853188 ] } },
+{ "type": "Feature", "properties": { "id": 4, "style": "intersection", "icon": "info", "interactId": 3 }, "geometry": { "type": "Point", "coordinates": [ 9.367253276132583, 45.898836080359402 ] } },
+{ "type": "Feature", "properties": { "id": 5, "style": "intersection", "icon": "info", "interactId": 3 }, "geometry": { "type": "Point", "coordinates": [ 9.367824017668399, 45.898184307617882 ] } },
+{ "type": "Feature", "properties": { "id": 6, "style": "intersection", "icon": "info", "interactId": 3 }, "geometry": { "type": "Point", "coordinates": [ 9.359396772275378, 45.899224325527598 ] } }
+]
+}
