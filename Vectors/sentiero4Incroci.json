@@ -1,0 +1,15 @@
+{
+"type": "FeatureCollection",
+"name": "sentiero4Incroci",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 0, "interactId": 3, "style": "intersection", "icon": "info" }, "geometry": { "type": "Point", "coordinates": [ 9.338731802980799, 45.90129964360662 ] } },
+{ "type": "Feature", "properties": { "id": 1, "interactId": 3, "style": "intersection", "icon": "info" }, "geometry": { "type": "Point", "coordinates": [ 9.348911207129621, 45.900332969503694 ] } },
+{ "type": "Feature", "properties": { "id": 2, "interactId": 3, "style": "intersection", "icon": "info" }, "geometry": { "type": "Point", "coordinates": [ 9.349243569236913, 45.900285178873894 ] } },
+{ "type": "Feature", "properties": { "id": 3, "interactId": 3, "style": "intersection", "icon": "info" }, "geometry": { "type": "Point", "coordinates": [ 9.355962497327461, 45.901338201955667 ] } },
+{ "type": "Feature", "properties": { "id": 4, "interactId": 3, "style": "intersection", "icon": "info" }, "geometry": { "type": "Point", "coordinates": [ 9.357750301342501, 45.901183968559472 ] } },
+{ "type": "Feature", "properties": { "id": 5, "interactId": 3, "style": "intersection", "icon": "info" }, "geometry": { "type": "Point", "coordinates": [ 9.360539536282127, 45.901766145322576 ] } },
+{ "type": "Feature", "properties": { "id": 6, "interactId": 3, "style": "intersection", "icon": "info" }, "geometry": { "type": "Point", "coordinates": [ 9.367251947468612, 45.898825935438794 ] } },
+{ "type": "Feature", "properties": { "id": 7, "interactId": 3, "style": "intersection", "icon": "info" }, "geometry": { "type": "Point", "coordinates": [ 9.367790678204614, 45.898182934237759 ] } }
+]
+}
