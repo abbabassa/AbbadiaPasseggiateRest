@@ -74,17 +74,19 @@ module.exports.getTrailData= function(locale)
 module.exports.getPhotosByTrailAndFeatureIds = function(locale)
 {
   return `SELECT 
-            photos.id as id,
-            photos.file_path as photoName,
-            photos.intersection_trail_id as "trailId",
-            photos.intersection_feature_id as "featureId",
-            photos.title as title,
-            photos.description-> 'desc'-> '${locale}' as description,
-            photos.type as type,
-            photos.ext as ext
+            -1 as id,
+            photo.guid as photoName,
+            intersection_photo.trail_id as "trailId",
+            intersection_photo.feature_id as "featureId",
+            'Info' as title,
+            intersection_photo.description-> 'desc'-> '${locale}' as description,
+            photo."type" as "type",
+            photo.ext as ext
           FROM
-            abbadiapasseggiate.photos
+            abbadiapasseggiate.inter_photo photo,
+            abbadiapasseggiate.intersection_inter_photo intersection_photo
           where 
-            photos.intersection_trail_id = $1 and
-            photos.intersection_feature_id = $2;`
+            intersection_photo.photo_guid = photo.guid and
+            intersection_photo.trail_id = $1 and
+            intersection_photo.feature_id = $2;`
 }
