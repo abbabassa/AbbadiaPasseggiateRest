@@ -1,0 +1,17 @@
+{
+"type": "FeatureCollection",
+"name": "AnelloColonghelliIncroci",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 0, "style": "intersection", "icon": "info", "interactId": 3 }, "geometry": { "type": "Point", "coordinates": [ 9.339737544843281, 45.911215182423504 ] } },
+{ "type": "Feature", "properties": { "id": 1, "style": "intersection", "icon": "info", "interactId": 3 }, "geometry": { "type": "Point", "coordinates": [ 9.339185123406146, 45.910431645895329 ] } },
+{ "type": "Feature", "properties": { "id": 2, "style": "intersection", "icon": "info", "interactId": 3 }, "geometry": { "type": "Point", "coordinates": [ 9.343782058936586, 45.904252135686555 ] } },
+{ "type": "Feature", "properties": { "id": 3, "style": "intersection", "icon": "info", "interactId": 3 }, "geometry": { "type": "Point", "coordinates": [ 9.348663660615752, 45.904133759664312 ] } },
+{ "type": "Feature", "properties": { "id": 4, "style": "intersection", "icon": "info", "interactId": 3 }, "geometry": { "type": "Point", "coordinates": [ 9.349497929724894, 45.904443792103521 ] } },
+{ "type": "Feature", "properties": { "id": 5, "style": "intersection", "icon": "info", "interactId": 3 }, "geometry": { "type": "Point", "coordinates": [ 9.351597694881349, 45.906413907330858 ] } },
+{ "type": "Feature", "properties": { "id": 6, "style": "intersection", "icon": "info", "interactId": 3 }, "geometry": { "type": "Point", "coordinates": [ 9.362214896685865, 45.911683049559038 ] } },
+{ "type": "Feature", "properties": { "id": 7, "style": "intersection", "icon": "info", "interactId": 3 }, "geometry": { "type": "Point", "coordinates": [ 9.362378368335628, 45.911711234326241 ] } },
+{ "type": "Feature", "properties": { "id": 8, "style": "intersection", "icon": "info", "interactId": 3 }, "geometry": { "type": "Point", "coordinates": [ 9.352147297841762, 45.912327071489578 ] } },
+{ "type": "Feature", "properties": { "id": 9, "style": "intersection", "icon": "info", "interactId": 3 }, "geometry": { "type": "Point", "coordinates": [ 9.346267955403691, 45.914770690805881 ] } }
+]
+}

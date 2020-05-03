@@ -1,0 +1,13 @@
+{
+"type": "FeatureCollection",
+"name": "AnelloCascataIncroci",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 0, "style": "intersection", "icon": "info", "interactId": 3 }, "geometry": { "type": "Point", "coordinates": [ 9.33975375108442, 45.898025415992777 ] } },
+{ "type": "Feature", "properties": { "id": 1, "style": "intersection", "icon": "info", "interactId": 3 }, "geometry": { "type": "Point", "coordinates": [ 9.349082204408683, 45.899949730973411 ] } },
+{ "type": "Feature", "properties": { "id": 2, "style": "intersection", "icon": "info", "interactId": 3 }, "geometry": { "type": "Point", "coordinates": [ 9.353884888739687, 45.898975947266621 ] } },
+{ "type": "Feature", "properties": { "id": 3, "style": "intersection", "icon": "info", "interactId": 3 }, "geometry": { "type": "Point", "coordinates": [ 9.356262273853069, 45.901733122118017 ] } },
+{ "type": "Feature", "properties": { "id": 4, "style": "intersection", "icon": "info", "interactId": 3 }, "geometry": { "type": "Point", "coordinates": [ 9.356776645854483, 45.904359237801934 ] } },
+{ "type": "Feature", "properties": { "id": 5, "style": "intersection", "icon": "info", "interactId": 3 }, "geometry": { "type": "Point", "coordinates": [ 9.344712156254209, 45.903408001908922 ] } }
+]
+}
